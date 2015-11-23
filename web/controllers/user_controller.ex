@@ -8,7 +8,6 @@ defmodule Rumbl.UserController do
 
   def show(conn, %{"id" => id}) do
     user = Repo.get(Rumbl.User, id)
-    IO.inspect user
     render conn, "show.html", user: user
   end
 end

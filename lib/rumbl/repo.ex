@@ -6,14 +6,11 @@ defmodule Rumbl.Repo do
   """
 
   def all(Rumbl.User) do
-    [
-      %Rumbl.User{id: 1, name: "Mohamad El-Husseini", username: "abitdodgy", password: "abitdodgy"},
-      %Rumbl.User{id: 2, name: "Sami El-Husseini", username: "sami", password: "sami"},
-      %Rumbl.User{id: 3, name: "Dani El-Husseini", username: "dani", password: "dani"},
-    ]
+    [ %Rumbl.User{id: "1", name: "Mohamad El-Husseini", username: "abitdodgy", password: "abitdodgy"},
+      %Rumbl.User{id: "2", name: "Sami El-Husseini", username: "sami", password: "sami"},
+      %Rumbl.User{id: "3", name: "Dani El-Husseini", username: "dani", password: "dani"}]
   end
-  def all(_module) do
-  end
+  def all(_module), do: []
 
   def get(module, id) do
     Enum.find all(module), fn map ->

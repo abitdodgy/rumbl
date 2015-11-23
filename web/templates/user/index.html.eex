@@ -4,7 +4,7 @@
   <tbody>
     <%= for user <- @users do %>
       <tr>
-        <th><%= first_name(user) %> (<%= user.id %>)</th>
+        <th><%= render "user.html", user: user %></th>
         <td><%= link "View", to: user_path(@conn, :show, user.id) %></td>
       </tr>
     <% end %>
